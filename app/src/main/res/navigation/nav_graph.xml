@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainscreenFragment"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <fragment
+        android:id="@+id/mainscreenFragment"
+        android:name="com.example.noticeme.Model.UI.MainscreenFragment"
+        android:label="MainscreenFragment"
+        tools:layout="@layout/fragment_mainscreen">
+        <action
+            android:id="@+id/action_mainscreenFragment_to_checklistenFragment"
+            app:destination="@id/checklistenFragment" />
+        <action
+            android:id="@+id/action_mainscreenFragment_to_notizenFragment"
+            app:destination="@id/notizenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checklistenFragment"
+        android:name="com.example.noticeme.Model.UI.ChecklistenFragment"
+        android:label="ChecklistenFragment"
+        tools:layout="@layout/fragment_chleckliste"
+    >
+        <action
+            android:id="@+id/action_checklistenFragment_to_mainscreenFragment"
+            app:destination="@id/mainscreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notizenFragment"
+        android:name="com.example.noticeme.Model.UI.NotizenFragment"
+        android:label="NotizenFragment"
+        tools:layout="@layout/fragment_notizen"
+    />
+</navigation>
